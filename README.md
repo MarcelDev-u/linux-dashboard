@@ -11,6 +11,8 @@ A self-updating personal dashboard served locally using only Bash and a few stan
 * Live system resource usage (CPU, RAM, Disk)
 
 ---
+![Dashboard](Zrzut%20ekranu%202025-05-31%20o%2006.04.10.png)
+---
 
 ## How It Works
 
@@ -25,6 +27,8 @@ A self-updating personal dashboard served locally using only Bash and a few stan
 * **Live system stats**: Written to a small HTML fragment (`sys.html`) and embedded via `<iframe>`
 * **Satellite**: Fetched from NASA GIBS once per day and cached locally
 
+---
+![Dashboard](Zrzut%20ekranu%202025-05-31%20o%2006.04.28.png)
 ---
 
 ## Quick Start
