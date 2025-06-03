@@ -49,7 +49,11 @@ get_sys_stats() {
     mem="Nieznane"
   fi
 
-  cpu=$(top -l 1 -n 0 | awk '/CPU usage/{print $3}' 2>/dev/null || top -bn1 | grep "Cpu(s)" | awk '{print $2+$4"%"}')
+  if [[ "$OSTYPE" == "darwin"* ]]; then
+    cpu=$(top -l 1 -n 0 | awk '/CPU usage/ {print $3}')
+  else
+    cpu=$(top -bn1 | awk '/^%Cpu/ {printf("%.1f%%", $2 + $4)}')
+  fi
   disk=$(df -h / | awk 'NR==2 {print $3 " / " $2}')
   echo "<p><b>CPU:</b> $cpu</p><p><b>Pamięć RAM:</b> $mem</p><p><b>Dysk:</b> $disk</p>"
 }
