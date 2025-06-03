@@ -43,8 +43,8 @@ A self-updating personal dashboard served locally using only Bash and a few stan
 ### Run it
 
 ```
-chmod +x dashboard2.sh
-./dashboard2.sh
+chmod +x dashboard.sh
+./dashboard.sh
 ```
 
 This will:
